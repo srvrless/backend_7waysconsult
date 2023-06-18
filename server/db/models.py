@@ -6,4 +6,5 @@ from db.database import Base
 class Link(Base):
     __tablename__ = "links"
     id = Column(Integer, primary_key=True, index=True)
+    query = Column(String)
     url = Column(String)

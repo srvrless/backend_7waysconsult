@@ -21,6 +21,3 @@ factory = async_sessionmaker(
 async def get_session() -> AsyncGenerator[AsyncSession, None]:  # noqa: WPS430, WPS442
     async with factory() as session:
         yield session
-
-
-context_session = get_session()

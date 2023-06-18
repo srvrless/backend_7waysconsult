@@ -51,4 +51,4 @@ async def search_links_and_store(query: str, session: AsyncSession):
     await session.commit()
     driver.quit()
 
-    return {"result": len(link_urls)}
+    return {"Загружено ссылок": len(link_urls)}

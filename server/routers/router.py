@@ -7,12 +7,12 @@ from db.database import get_session
 api_router = APIRouter()
 
 
-@api_router.get("/alfrted")
+@api_router.post("/load_links")
 async def search_links(query: str, session: AsyncSession = Depends(get_session)):
-    # try:
-    return await crud.search_links_and_store(query, session)
-    # except Exception:
-    #     raise HTTPException(detail=f"Something went wrong", status_code=403)
+    try:
+        return await crud.search_links_and_store(query, session)
+    except Exception:
+        raise HTTPException(detail=f"Something went wrong", status_code=403)
 
 
 @api_router.get("/links")

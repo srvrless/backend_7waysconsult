@@ -1,10 +1,14 @@
 # Install dependecies
 
 ```
+cd server
+```
+
+```
 pip install -r requirements.txt
 ```
 
-# Run app
+# Run backend
 
 ```
 uvicorn run:app --reload
